@@ -10,8 +10,8 @@ np.random.seed(6727)
 df = pd.read_csv("Life Expectancy Data.csv")
 df.dropna(inplace=True)
 
-X = df[['Adult Mortality', 'BMI', 'Schooling', 'Income composition of resources']]
-y = df['Life expectancy']
+X = df[['Adult Mortality', ' BMI ', 'Schooling', 'Income composition of resources']]
+y = df['Life expectancy ']
 
 ridge = RidgeCV(alphas=[0.1, 1.0, 10.0], cv=10)
 ridge.fit(X, y)
